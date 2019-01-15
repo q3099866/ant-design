@@ -27,10 +27,13 @@ const props = {
   onChange(info) {
     if (info.file.status !== 'uploading') {
       console.log(info.file, info.fileList);
+      alert(2)
     }
     if (info.file.status === 'done') {
+    alert(2)
       message.success(`${info.file.name} file uploaded successfully`);
     } else if (info.file.status === 'error') {
+    alert(3)
       message.error(`${info.file.name} file upload failed.`);
     }
   },
